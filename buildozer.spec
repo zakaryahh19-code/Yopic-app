@@ -1,6 +1,6 @@
-# This .spec config file tells Buildozer an app's requirements for being built.
+# This.spec config file tells Buildozer an app's requirements for being built.
 #
-# It largely follows the syntax of an .ini file.
+# It largely follows the syntax of an.ini file.
 # See the end of the file for more details and warnings about common mistakes.
 
 [app]
@@ -15,13 +15,13 @@ package.name = Yopic
 package.domain = org.test
 
 # (str) Source code where the main.py live
-source.dir = .
+source.dir =.
 
 # (list) Source files to include (leave empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,ico
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = assets/*,images/*.png
+source.include_patterns = assets/*
 
 # (list) Source files to exclude (leave empty to not exclude anything)
 #source.exclude_exts = spec
@@ -42,11 +42,11 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.3.1,kivymd,pillow 
+requirements = python3,kivy==2.3.1,kivymd==1.2.0,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
-# requirements.source.kivy = ../../kivy
+# requirements.source.kivy =../../kivy
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
@@ -109,16 +109,16 @@ fullscreen = 0
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 33
+android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 24
+android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 20
+android.sdk = 33
 
 # (str) Android NDK version to use
-#android.ndk = 23b
+android.ndk = 25b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -141,7 +141,8 @@ fullscreen = 0
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-# android.accept_sdk_license = False
+android.accept_sdk_license_agreements = True
+android.accept_sdk_license = True
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
@@ -152,11 +153,11 @@ fullscreen = 0
 
 # (str) Extra xml to write directly inside the <manifest> element of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML code
-#android.extra_manifest_xml = ./src/android/extra_manifest.xml
+#android.extra_manifest_xml =./src/android/extra_manifest.xml
 
 # (str) Extra xml to write directly inside the <manifest><application> tag of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML arguments:
-#android.extra_manifest_application_arguments = ./src/android/extra_manifest_application_arguments.xml
+#android.extra_manifest_application_arguments =./src/android/extra_manifest_application_arguments.xml
 
 # (str) Full name including package path of the Java class that implements Python Service
 # use that parameter to set custom Java class which extends PythonService
@@ -177,7 +178,7 @@ fullscreen = 0
 # (str) Path to a custom blacklist file
 #android.blacklist_src =
 
-# (list) List of Java .jar files to add to the libs so that pyjnius can access
+# (list) List of Java.jar files to add to the libs so that pyjnius can access
 # their classes. Don't add jars that you do not need, since extra jars can slow
 # down the build process. Allows wildcards matching, for example:
 # OUYA-ODK/libs/*.jar
@@ -201,10 +202,10 @@ fullscreen = 0
 # Some examples:
 # 1) A file to add to resources, legal resource names contain ['a-z','0-9','_']
 # android.add_resources = my_icons/all-inclusive.png:drawable/all_inclusive.png
-# 2) A directory, here  'legal_icons' must contain resources of one kind
+# 2) A directory, here 'legal_icons' must contain resources of one kind
 # android.add_resources = legal_icons:drawable
-# 3) A directory, here 'legal_resources' must contain one or more directories, 
-# each of a resource kind:  drawable, xml, etc...
+# 3) A directory, here 'legal_resources' must contain one or more directories,
+# each of a resource kind: drawable, xml, etc...
 # android.add_resources = legal_resources
 #android.add_resources =
 
@@ -222,14 +223,14 @@ fullscreen = 0
 # android.add_compile_options = "sourceCompatibility = 1.8", "targetCompatibility = 1.8"
 
 # (list) Gradle repositories to add {can be necessary for some android.gradle_dependencies}
-# please enclose in double quotes 
+# please enclose in double quotes
 # e.g. android.gradle_repositories = "maven { url 'https://repo.spring.io/release' }"
 #android.add_gradle_repositories =
 
 # (list) packaging options to add
 # see https://developer.android.com/reference/tools/gradle-api/7.1/com/android/build/api/dsl/PackagingOptions
 # can be necessary to solve conflicts in gradle_dependencies
-# please enclose in double quotes 
+# please enclose in double quotes
 # e.g. android.add_packaging_options = "exclude 'META-INF/common.kotlin_module'", "exclude 'META-INF/*.kotlin_module'"
 #android.add_packaging_options =
 
@@ -309,7 +310,7 @@ android.allow_backup = True
 # Usage example : android.manifest_placeholders = [myCustomUrl:\"org.kivy.customurl\"]
 # android.manifest_placeholders = [:]
 
-# (bool) Skip byte compile for .py files
+# (bool) Skip byte compile for.py files
 # android.no-byte-compile-python = False
 
 # (str) The format used to package the app for release mode (aab or apk or aar).
@@ -366,21 +367,19 @@ android.allow_backup = True
 # (str) extra command line arguments to pass when invoking pythonforandroid.toolchain
 #p4a.extra_args =
 
-
-
 #
 # iOS specific
 #
 
 # (str) Path to a custom kivy-ios folder
-#ios.kivy_ios_dir = ../kivy-ios
+#ios.kivy_ios_dir =../kivy-ios
 # Alternately, specify the URL and branch of a git checkout:
 ios.kivy_ios_url = https://github.com/kivy/kivy-ios
 ios.kivy_ios_branch = master
 
 # Another platform dependency: ios-deploy
 # Uncomment to use a custom checkout
-#ios.ios_deploy_dir = ../ios_deploy
+#ios.ios_deploy_dir =../ios_deploy
 # Or specify URL and branch
 ios.ios_deploy_url = https://github.com/phonegap/ios-deploy
 ios.ios_deploy_branch = 1.12.2
@@ -410,14 +409,13 @@ ios.codesign.allowed = false
 # (str) Camera Usage justification string.
 #ios.camera_usage_description = "<App> uses Camera to do <X and Y and Z>"
 
-
 # (bool) Allow StatusBar to be controlled by API
 # ios.viewcontroller_based_statusbar_appearance = False
 
 # (str) A Xml String specifying a extension type.
-#ios.app_extensions = [["7zip", "zip"],  ["public.zip-archive"], "org.kivy.myappextensionfile", "<MyCustom> Extension File", "${MACOSX_BUNDLE_ICON_FILE}", "http://mysite.com/myapp/extensions.html"],
+#ios.app_extensions = [["7zip", "zip"], ["public.zip-archive"], "org.kivy.myappextensionfile", "<MyCustom> Extension File", "${MACOSX_BUNDLE_ICON_FILE}", "http://mysite.com/myapp/extensions.html"],
 
-# (str) URL pointing to .ipa file to be installed
+# (str) URL pointing to.ipa file to be installed
 # This option should be defined along with `display_image_url` and `full_size_image_url` options.
 #ios.manifest.app_url =
 
@@ -429,7 +427,6 @@ ios.codesign.allowed = false
 # This option should be defined along with `app_url` and `display_image_url` options.
 #ios.manifest.full_size_image_url =
 
-
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
@@ -439,60 +436,7 @@ log_level = 2
 warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
-# build_dir = ./.buildozer
+# build_dir =./.buildozer
 
-# (str) Path to build output (i.e. .apk, .aab, .ipa) storage
-# bin_dir = ./bin
-
-#-----------------------------------------------------------------------------
-#   Notes about using this file:
-#
-#   Buildozer uses a variant of Python's ConfigSpec to read this file.
-#   For the basic syntax, including interpolations, see
-#       https://docs.python.org/3/library/configparser.html#supported-ini-file-structure
-#
-#   Warning: Comments cannot be used "inline" - i.e.
-#       [app]
-#       title = My Application # This is not a comment, it is part of the title.
-#
-#   Warning: Indented text is treated as a multiline string - i.e.
-#       [app]
-#       title = My Application
-#          package.name = myapp # This is all part of the title.
-#
-#   Buildozer's .spec files have some additional features:
-#
-#   Buildozer supports lists - i.e.
-#       [app]
-#       source.include_exts = py,png,jpg
-#       #                     ^ This is a list.
-#
-#       [app:source.include_exts]
-#       py
-#       png
-#       jpg
-#       # ^ This is an alternative syntax for a list.
-#
-#   Buildozer's option names are case-sensitive, unlike most .ini files.
-#
-#   Buildozer supports overriding options through environment variables.
-#   Name an environment variable as SECTION_OPTION to override a value in a .spec
-#   file.
-#
-#   Buildozer support overriding options through profiles.
-#   For example, you want to deploy a demo version of your application without
-#   HD content. You could first change the title to add "(demo)" in the name
-#   and extend the excluded directories to remove the HD content.
-#
-#       [app@demo]
-#       title = My Application (demo)
-#
-#       [app:source.exclude_patterns@demo]
-#       images/hd/*
-#
-#   Then, invoke the command line with the "demo" profile:
-#
-#        buildozer --profile demo android debug
-#
-#   Environment variable overrides have priority over profile overrides.
-rrides.
+# (str) Path to build output (i.e..apk,.aab,.ipa) storage
+# bin_dir =./bin
