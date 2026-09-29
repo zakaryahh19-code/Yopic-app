@@ -6,7 +6,7 @@ source.dir =.
 source.include_exts = py,png,jpg,kv,atlas,ico
 source.include_patterns = assets/*
 version = 0.1
-requirements = python3,kivy==2.3.0,kivymd==1.1.1,pillow
+requirements = python3==3.11.9,kivy==2.3.0,kivymd==1.1.1,pillow
 orientation = portrait
 fullscreen = 0
 icon.filename = %(source.dir)s/assets/icon.png
